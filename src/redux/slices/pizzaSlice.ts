@@ -52,11 +52,7 @@ export const fetchPizzas = createAsyncThunk<Pizza[], FetchPizzasArgs>(
 export const pizzaSlice = createSlice({
 	name: 'pizza',
 	initialState,
-	reducers: {
-		// setPizzas: (state, action: PayloadAction<Pizza[]>) => {
-		// 	state.pizzas = action.payload;
-		// },
-	},
+	reducers: {},
 	extraReducers: builder => {
 		builder
 			.addCase(fetchPizzas.pending, state => {
@@ -75,7 +71,5 @@ export const pizzaSlice = createSlice({
 });
 
 export const selectPizzas = (state: RootState) => state.pizza;
-
-// export const { setPizzas } = pizzaSlice.actions;
 
 export default pizzaSlice.reducer;
