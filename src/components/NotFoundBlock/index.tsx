@@ -1,0 +1,19 @@
+import styles from './NotFoundBlock.module.scss';
+
+const NotFoundBlock: React.FC = () => {
+	console.log(styles);
+	return (
+		<div className={styles.root}>
+			<h1>
+				<span>😢</span>
+				<br />
+				404 Not found
+			</h1>
+			<p className={styles.description}>
+				К сожалению, данная страница отсутствует в нашем интернет-магазине{' '}
+			</p>
+		</div>
+	);
+};
+
+export default NotFoundBlock;
